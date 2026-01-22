@@ -1,0 +1,53 @@
+<div class="w-full h-[100vh] flex flex-row items-center justify-center" style="background-color: #192a32;">
+  <div class="w-[60%] h-[85%] shadow-[-1px_1px_20px_4px_rgba(255,_255,_255,_0.05)] rounded-4xl overflow-hidden">
+    <!-- Header -->
+    <div class="w-full h-auto px-5 pe-7 py-3 flex flex-row justify-between items-center border-b-3 border-teal-500">
+        <div class="flex flex-row items-center">
+            <img src="../../../assets/image/360_F_628419033_DhXsL6BKRjAfsmunFSGKXXjnnccJddno-removebg-preview.png" class="w-15">
+            <h1 class="font-extrabold text-2xl" style="color: #f2b237;">BLACK CYBER</h1>
+        </div>
+
+        <div class="flex flex-row items-center justify-center">
+            <h1 style="background-color: #a8bec9;" class="px-2 py-1 rounded-lg me-2">{{ username }}</h1>
+            <div class="flex flex-row items-center px-3 py-1 bg-teal-500/20 rounded-lg justify-center border border-2 border-teal-500">
+                <span class="relative flex size-3 me-2">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex size-3 rounded-full bg-teal-500"></span>
+                </span>
+                <h1 class="text-teal-500">{{ countOnlineUser }} Online</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group button -->
+
+    <div class="w-full h-auto text-base font-bold">
+        <!-- chat button -->
+        <button 
+            routerLink="/chat" 
+            class="w-[50%] py-3 text-white rounded-b-xl cursor-pointer" 
+            (click)="isActive('chat')"
+            [class.bg-yellow-500]="activeButton === 'chat'"
+            [class.bg-transparent]="activeButton !== 'chat'"
+        >
+            Chat
+        </button>
+        <!-- tic-tac-toe game button -->
+        <button 
+            routerLink="/game" 
+            class="w-[50%] py-3 text-white cursor-pointer rounded-b-xl" 
+            (click)="isActive('game')"
+            [class.bg-yellow-500]="activeButton === 'game'"
+            [class.bg-transparent]="activeButton !== 'game'"
+        >
+            Tic-Tac-Toe Game
+        </button>
+    </div>
+
+    <!-- body -->
+
+    <div class="w-full h-auto pt-2">
+        <router-outlet/>
+    </div>
+  </div>
+</div>

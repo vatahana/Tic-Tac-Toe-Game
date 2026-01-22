@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@font-face {
+    font-family: jost;
+    src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: jost;
+}
+
+@layer utilities {
+  /* Scrollbar container */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 0px; /* thin vertical scrollbar */
+  }
+
+  /* Track (background) */
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent; /* no white background */
+  }
+
+  /* Thumb (the draggable part) */
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #4b5563; /* Tailwind gray-700 */
+    border-radius: 4px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #374151; /* Tailwind gray-800 */
+  }
+
+  /* Remove arrows (scrollbar buttons) */
+  .scrollbar-custom::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+

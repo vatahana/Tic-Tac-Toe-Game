@@ -1,0 +1,101 @@
+.container {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-mark {
+    width: 350px;
+    height: auto;
+    background-color: #1f3540;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mark {
+    width: 100%;
+    display: flex;
+    margin: 15px 0px;
+    background-color: #192a32;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.mark-type {
+    width: calc(100%/2);
+    font-size: 30px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.mark-type:first-child {
+    color: #a8bec9;
+}
+
+.mark-type:last-child {
+    background-color: #a8bec9;
+    border-radius: 5px;
+}
+
+.btn-fine-match {
+    width: 350px;
+    cursor: pointer;
+    height: 50px;
+    background-color: #f2b237;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-turn {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    background-color: #1f3540;
+    border-radius: 10px;
+    color: #f2b237;
+    font-size: 35px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.result {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-rematch {
+    width: 350px;
+    cursor: pointer;
+    height: 50px;
+    background-color: #f2b237;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.win-control {
+    margin-top: 15px;
+    color: aquamarine;
+    text-transform: uppercase;
+    font-weight: 700;
+}
