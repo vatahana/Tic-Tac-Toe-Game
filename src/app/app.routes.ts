@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: '', component: MainComponent, children:[
         { path: 'chat', component: ChatForm },
         { path: 'game', component: GameForm }
-    ]}
+    ]},
+    { path: '**', redirectTo: 'login' }
 ];
