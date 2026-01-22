@@ -9,7 +9,9 @@ export class SocketService {
   private usernameSet = false;
 
   constructor() {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://node-js-web-socket.onrender.com', {
+      transports: ['websocket'],
+    });
   }
 
   getSocket(): Socket {
